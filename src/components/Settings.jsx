@@ -25,7 +25,7 @@ function Settings({ user, setUser, setIsAuthenticated }) {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
       try {
-        await fetch(`http://localhost:5000/users/${user.id}`, { method: 'DELETE' });
+        await fetch(`https://book-club-manager-backend.onrender.com/users/${user.id}`, { method: 'DELETE' });
         localStorage.removeItem('user');
         setUser(null);
         setIsAuthenticated(false);
@@ -39,7 +39,7 @@ function Settings({ user, setUser, setIsAuthenticated }) {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await fetch(`http://localhost:5000/users/${user.id}`, {
+      const response = await fetch(`https://book-club-manager-backend.onrender.com/users/${user.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),

@@ -49,7 +49,7 @@ function Club({ user , setUser}) {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:5000/clubs/clubmember/${clubId}`, {
+      const response = await fetch(`https://book-club-manager-backend.onrender.com/clubs/clubmember/${clubId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_id: currentUser.id }),
