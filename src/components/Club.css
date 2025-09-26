@@ -1,0 +1,77 @@
+.clubs-page {
+  padding: 1rem;
+}
+
+.clubs-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.club-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.club-card button {
+  background-color: #6a5acd;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.club-card button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.addclubbtnbtn {
+  background-color: #6a5acd;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.clubs-page input, .clubs-page textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.addclubbtns {
+  background-color: #6a5acd;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-bottom: 5px;
+}
+.toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+.toast.error {
+  background: #e74c3c;
+  color: white;
+}
+.toast.success {
+  background: #27ae60;
+  color: white;
+}
+
