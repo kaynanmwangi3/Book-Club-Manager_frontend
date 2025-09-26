@@ -72,6 +72,7 @@ function Club({ user , setUser}) {
     try {
       const response = await addClub(values);
       if (response.success) {
+        const newClub = response.club || { id: Date.now(), ...values };
         setClubs([...clubs, response.club]);
         showToast(response.message, "success");
         resetForm();
