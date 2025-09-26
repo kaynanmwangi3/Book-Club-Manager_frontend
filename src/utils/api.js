@@ -1,6 +1,6 @@
 export const fetchUsers = async () => {
   try {
-    const response = await fetch('http://localhost:5000/users');
+    const response = await fetch(' https://book-club-manager-backend.onrender.com/users');
     return await response.json();
   } catch (error) {
     console.error('Error fetching users:', error);
@@ -10,7 +10,7 @@ export const fetchUsers = async () => {
 
 export const fetchBooks = async () => {
   try {
-    const response = await fetch('http://localhost:5000/books');
+    const response = await fetch(' https://book-club-manager-backend.onrender.com/books');
     return await response.json();
   } catch (error) {
     console.error('Error fetching books:', error);
@@ -20,7 +20,7 @@ export const fetchBooks = async () => {
 
 export const fetchClubs = async () => {
   try {
-    const response = await fetch('http://localhost:5000/clubs');
+    const response = await fetch('https://book-club-manager-backend.onrender.com/clubs');
     return await response.json();
   } catch (error) {
     console.error('Error fetching clubs:', error);
@@ -30,7 +30,7 @@ export const fetchClubs = async () => {
 
 export const addBook = async (bookData) => {
   try {
-    const response = await fetch('http://localhost:5000/books', {
+    const response = await fetch('https://book-club-manager-backend.onrender.com/books', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(bookData),
@@ -44,7 +44,7 @@ export const addBook = async (bookData) => {
 
 export const addBookOwnership = async (bookId, userId) => {
   try {
-    const response = await fetch(`http://localhost:5000/books/ownership/${bookId}/`, {
+    const response = await fetch(`https://book-club-manager-backend.onrender.com/books/ownership/${bookId}/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user_id: userId, role: 'owner' }),
@@ -60,7 +60,7 @@ export const addBookOwnership = async (bookId, userId) => {
 
 export const addClub = async (clubData) => {
   try {
-    const response = await fetch('http://localhost:5000/clubs', {
+    const response = await fetch(' https://book-club-manager-backend.onrender.com/clubs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(clubData),
@@ -75,7 +75,7 @@ export const addClub = async (clubData) => {
 
 export const deleteClub = async (clubId) => {
   try {
-    const response = await fetch(`http://localhost:5000/clubs/${clubId}`, {
+    const response = await fetch(` https://book-club-manager-backend.onrender.com/clubs/${clubId}`, {
       method: 'DELETE',
     });
     return await response.json();
@@ -87,7 +87,7 @@ export const deleteClub = async (clubId) => {
 
 export const updateUser = async (userId, updates) => {
   try {
-    const response = await fetch(`http://localhost:5000/users/${userId}`, {
+    const response = await fetch(` https://book-club-manager-backend.onrender.com/users/${userId}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updates),

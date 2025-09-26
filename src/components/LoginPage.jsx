@@ -25,7 +25,7 @@ function LoginPage({ setIsAuthenticated, setUser }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch(' https://book-club-manager-backend.onrender.com/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: loginName, password: loginPassword }),
@@ -49,7 +49,7 @@ function LoginPage({ setIsAuthenticated, setUser }) {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/signup', {
+      const response = await fetch(' https://book-club-manager-backend.onrender.com/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: regName, email: regEmail, phone_number: regPhone, password: regPassword }),
