@@ -1,0 +1,71 @@
+.settings-modal {
+  position: relative;
+}
+
+.settings-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: 100%;
+  width: 300px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.settings-content div {
+  margin-bottom: 1rem;
+}
+
+.settings-content input {
+  padding: 0.5rem;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.settings-content button {
+  background-color: #6a5acd;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.settings-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #6a5acd;
+}
+.settingbtns{
+  margin-bottom: 3px;
+}
+
+.toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+.toast.error {
+  background: #e74c3c;
+}
+.toast.success {
+  background: #27ae60;
+}
