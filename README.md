@@ -99,6 +99,7 @@ Book Club Manager is a full-stack web application designed to streamline the man
 ## Known Bugs
 - **Book Delete/Update**: The backend implements delete and update functionality for books, but the frontend has not yet implemented these features, so they do not work in the user interface.
 - **Club Update**: The update function for clubs is not implemented in either the frontend or backend.
+- **Loading Time**: Takes an almost extensive time range 1-2 minutes to fetch the api.
 
 ## Contributing
 Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request with your changes.
