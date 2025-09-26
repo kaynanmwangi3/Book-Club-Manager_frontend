@@ -1,12 +1,111 @@
-# React + Vite
+# BookClub Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Book Club Manager is a full-stack web application designed to streamline the management of book clubs, connecting avid readers and fostering a community around literature. Built with a robust backend using Flask and a dynamic frontend with React, this project offers a seamless experience for users to create, join, and manage book clubs, track reading progress, and engage in discussions.
 
-Currently, two official plugins are available:
+## Contributors
+- Kaynan Mwangi (kaynanmwangi6@gmail.com)
+- John Atieli (johnatieli@gmail.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **User Management**: Register and log in to personalize your experience, with secure authentication and profile updates.
+- **Club Creation and Membership**: Start your own book club or join existing ones, with support for multiple members and clubs per user.
+- **Book Tracking**: Add books, with details like title, author, and publication year.
+- **Dynamic Dashboard**: A post-login landing page displays popular choice books, recent books, and book reviews.
+- **Data Persistence**: Utilizes SQLAlchemy with a SQLite database to store user, book, and club data, including many-to-many relationships for enhanced functionality.
+- **Responsive Design**: A clean, user-friendly interface inspired by modern book club platforms, with navigation across multiple routes (Clubs, Members, Bookshelf, Schedule, Analytics).
 
-## Expanding the ESLint configuration
+## Technologies
+### Frontend
+- **React**: ^19.1.1
+- **React DOM**: ^19.1.1
+- **React Router DOM**: ^7.9.2
+- **Formik**: ^2.4.6
+- **Yup**: ^1.7.1
+- **Axios**: ^1.12.2
+- **Boxicons**: ^2.1.4
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+- **Flask**: *
+- **Flask-CORS**: *
+- **Flask-RESTful**: *
+- **Faker**: *
+- **Gunicorn**: *
+- **Psycopg2-binary**: *
+- **Flask-SQLAlchemy**: *
+- **Flask-Migrate**: *
+- **SQLAlchemy-Serializer**: *
+
+## Getting Started
+
+### Prerequisites
+- **Node.js**: Version higher than 18
+- **Python**: Version 3.8 or higher
+
+### Installation
+
+#### Frontend
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/kaynanmwangi3/Book-Club-Manager_backend
+   ```
+2. Install dependencies:  
+   ```bash
+   npm install
+   ```
+3. Start the development server:  
+   ```bash
+   npm run dev
+   ```
+   or  
+   ```bash
+   npm start
+   ```
+
+#### Backend
+1. From the README, click the backend link to the backend repository, then clone it:  
+   ```bash
+   git clone https://github.com/kaynanmwangi3/Book-Club-Manager_backend
+   ```
+2. Install dependencies:  
+   ```bash
+   pipenv install
+   ```
+   or  
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Activate the virtual environment (if using Pipenv):  
+   ```bash
+   pipenv shell
+   ```
+   or (if using pip):  
+   ```bash
+   # No additional shell command needed
+   ```
+4. Run the Flask application:  
+   ```bash
+   flask run
+   ```
+   or  
+   ```bash
+   python app.py
+   ```
+
+## Usage
+- After starting both the frontend and backend servers, navigate to `http://localhost:5173` (or the port specified by `npm run dev`) in your browser.
+- Log in or register to access the dashboard, where you can create clubs, add books, and manage memberships.
+
+## Known Bugs
+- **Book Delete/Update**: The backend implements delete and update functionality for books, but the frontend has not yet implemented these features, so they do not work in the user interface.
+- **Club Update**: The update function for clubs is not implemented in either the frontend or backend.
+
+## Contributing
+Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request with your changes.
+
+## License
+No license specified.
+
+## Acknowledgements
+- Special thanks to the open-source communities behind Flask, React, and other dependencies for making this project possible.
+
